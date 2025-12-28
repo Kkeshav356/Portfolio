@@ -4,38 +4,23 @@ import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
-    title: "Network Security Scanner",
+    title: "Hangman Game with Advanced GUI",
     description:
-      "Comprehensive network vulnerability scanner that identifies security weaknesses and provides detailed reports with remediation suggestions.",
-    tech: ["Python", "Scapy", "SQLite", "Flask"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Encrypted Chat Application",
-    description:
-      "End-to-end encrypted messaging platform with user authentication, implementing modern cryptographic protocols for secure communication.",
-    tech: ["Node.js", "React", "WebSocket", "AES Encryption"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Intrusion Detection System",
-    description:
-      "Machine learning-based IDS that analyzes network traffic patterns to detect and alert on potential security threats in real-time.",
-    tech: ["Python", "TensorFlow", "Pandas", "Flask"],
-    github: "https://github.com",
+      "Fully interactive Hangman game featuring an advanced graphical user interface, dynamic word selection, real-time input handling, and robust game-state management with a modular and scalable codebase.",
+    tech: ["Python","Tkinter"],
+    github: "https://github.com/Kkeshav356/Hangman-Game-with-Advanced-GUI-application",
     demo: null,
   },
   {
-    title: "Password Manager",
+    title: "Secure Online Web-Based Voting System",
     description:
-      "Secure password management application with master password protection, password generation, and encrypted local storage.",
-    tech: ["TypeScript", "Electron", "SQLCipher", "React"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+      "Secure web-based voting platform designed with a strong focus on confidentiality and integrity, implementing authentication mechanisms, secure vote-casting workflows, and protection against common web security vulnerabilities.",
+    tech: ["Web Security", "Authentication", "Cryptography"],
+    github: "https://github.com/Kkeshav356/Secure-online-web-based-voting-system",
+    demo: null,
   },
 ]
+
 
 export function Projects() {
   return (

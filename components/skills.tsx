@@ -14,17 +14,34 @@ const skillCategories = [
       "Security Auditing",
       "Vulnerability Assessment",
       "SIEM Tools",
+      "Cryptography Basics",
+      "Network Security Concepts",
     ],
   },
   {
     title: "Networking",
-    skills: ["TCP/IP", "DNS", "Firewalls", "VPN", "Network Protocols", "Wireshark"],
+    skills: ["TCP/IP", "DNS", "Firewalls", "Network Protocols", "Wireshark"],
   },
   {
     title: "Tools & Technologies",
-    skills: ["Linux", "Git", "Docker", "Metasploit", "Burp Suite", "Nmap", "Kali Linux"],
+    skills: [
+      "Linux",
+      "Git",
+      "VS Code",
+      "Wireshark",
+      "Cisco Packet Tracer",
+      "Metasploit",
+      "Burp Suite",
+      "Nmap",
+      "Kali Linux",
+    ],
+  },
+  {
+    title: "Databases",
+    skills: ["MySQL"],
   },
 ]
+
 
 export function Skills() {
   return (

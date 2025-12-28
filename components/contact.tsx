@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Linkedin, Github, Send } from "lucide-react"
+import { Mail, Linkedin, Github, Send, Instagram } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -41,17 +41,17 @@ export function Contact() {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:keshavloya8@gmail.com"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
                   >
                     <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                       <Mail className="w-5 h-5" />
                     </div>
-                    <span>your.email@example.com</span>
+                    <span>Email</span>
                   </a>
 
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/kkeshav-loya-44085430a/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
@@ -59,11 +59,11 @@ export function Contact() {
                     <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                       <Linkedin className="w-5 h-5" />
                     </div>
-                    <span>linkedin.com/in/yourprofile</span>
+                    <span>Linkedin</span>
                   </a>
 
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/Kkeshav356"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
@@ -71,7 +71,19 @@ export function Contact() {
                     <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                       <Github className="w-5 h-5" />
                     </div>
-                    <span>github.com/yourusername</span>
+                    <span>Github</span>
+                  </a>
+
+                  <a
+                    href="https://instagram.com/loyakkeshav"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
+                      <Instagram className="w-5 h-5" />
+                    </div>
+                    <span>Instagram</span>
                   </a>
                 </div>
               </Card>
