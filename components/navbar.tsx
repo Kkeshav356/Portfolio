@@ -46,7 +46,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <a href="#hero" className="font-mono text-lg font-semibold text-primary">
-          {"<Portfolio />"}
+          {"Kkeshav Loya"}
         </a>
 
         <div className="hidden md:flex items-center gap-1">
