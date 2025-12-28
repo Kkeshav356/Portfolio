@@ -10,46 +10,23 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-bold">Who I Am</h2>
           </div>
 
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <ScrollReveal
-              baseOpacity={0}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
-              textClassName="text-sm md:text-base font-normal leading-relaxed"
-              containerClassName="m-0"
-            >
+          <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+            <p>
               I'm a passionate Computer Science and Cyber Security undergraduate dedicated to understanding and solving
-              complex technical challenges. My journey in technology is driven by a deep fascination with how systems work
-              and how to make them more secure.
-            </ScrollReveal>
-
-            <ScrollReveal
-              baseOpacity={0}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
-              textClassName="text-sm md:text-base font-normal leading-relaxed"
-              containerClassName="m-0"
-            >
+              complex technical challenges. My journey in technology is driven by a deep fascination with how systems
+              work and how to make them more secure.
+            </p>
+            <p>
               With a focus on problem-solving and systems-level thinking, I approach every project with meticulous
               attention to detail and a commitment to best practices. Whether it's developing secure applications,
               analyzing network vulnerabilities, or exploring cutting-edge security frameworks, I thrive on learning and
               implementing innovative solutions.
-            </ScrollReveal>
-
-            <ScrollReveal
-              baseOpacity={0}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
-              textClassName="text-sm md:text-base font-normal leading-relaxed"
-              containerClassName="m-0"
-            >
-              Beyond technical skills, I've developed strong leadership and communication abilities through participation
-              in Model United Nations and Youth Parliament, which have shaped my collaborative approach to solving
-              real-world problems.
-            </ScrollReveal>
+            </p>
+            <p>
+              Beyond technical skills, I've developed strong leadership and communication abilities through
+              participation in Model United Nations and Youth Parliament, which have shaped my collaborative approach to
+              solving real-world problems.
+            </p>
           </div>
         </div>
       </div>
