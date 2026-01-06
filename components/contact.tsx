@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Linkedin, Github, Send, Instagram } from "lucide-react"
+import Dock from "./Dock"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,29 @@ export function Contact() {
     // Handle form submission
     console.log("Form submitted:", formData)
   }
+
+  const dockItems = [
+    {
+      icon: <Mail className="w-6 h-6" />,
+      label: 'Email',
+      onClick: () => window.location.href = 'mailto:keshavloya8@gmail.com'
+    },
+    {
+      icon: <Linkedin className="w-6 h-6" />,
+      label: 'LinkedIn',
+      onClick: () => window.open('https://www.linkedin.com/in/kkeshav-loya-44085430a/', '_blank')
+    },
+    {
+      icon: <Github className="w-6 h-6" />,
+      label: 'GitHub',
+      onClick: () => window.open('https://github.com/Kkeshav356', '_blank')
+    },
+    {
+      icon: <Instagram className="w-6 h-6" />,
+      label: 'Instagram',
+      onClick: () => window.open('https://instagram.com/loyakkeshav', '_blank')
+    },
+  ];
 
   return (
     <section id="contact" className="py-24 relative">
@@ -39,55 +63,15 @@ export function Contact() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <Card className="glass p-6 space-y-4">
-                <h3 className="text-xl font-semibold">Connect With Me</h3>
-
-                <div className="space-y-4">
-                  <a
-                    href="mailto:keshavloya8@gmail.com"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                    <span>Email</span>
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/in/kkeshav-loya-44085430a/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                      <Linkedin className="w-5 h-5" />
-                    </div>
-                    <span>Linkedin</span>
-                  </a>
-
-                  <a
-                    href="https://github.com/Kkeshav356"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                      <Github className="w-5 h-5" />
-                    </div>
-                    <span>Github</span>
-                  </a>
-
-                  <a
-                    href="https://instagram.com/loyakkeshav"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                      <Instagram className="w-5 h-5" />
-                    </div>
-                    <span>Instagram</span>
-                  </a>
+              <Card className="glass p-6 space-y-8 flex flex-col justify-center min-h-[300px]">
+                <h3 className="text-xl font-semibold text-center mt-2">Connect With Me</h3>
+                <div className="flex justify-center items-center py-8">
+                  <Dock
+                    items={dockItems}
+                    panelHeight={68}
+                    baseItemSize={50}
+                    magnification={70}
+                  />
                 </div>
               </Card>
             </div>
@@ -151,3 +135,4 @@ export function Contact() {
     </section>
   )
 }
+
