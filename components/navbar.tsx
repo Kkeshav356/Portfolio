@@ -55,8 +55,8 @@ export function Navbar() {
               key={id}
               href={`#${id}`}
               className={`px-4 py-2 rounded-lg text-sm transition-all ${activeSection === id
-                  ? "text-primary font-medium bg-primary/10"
-                  : "text-muted-foreground hover:text-foreground"
+                ? "text-primary font-medium bg-primary/10"
+                : "text-muted-foreground hover:text-foreground"
                 }`}
             >
               {label}

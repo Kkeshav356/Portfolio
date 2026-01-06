@@ -29,7 +29,7 @@ function hexToRgb(hex) {
 }
 
 const DotGrid = ({
-    dotSize = 16,
+    dotSize = 8,
     gap = 32,
     baseColor = '#5227FF',
     activeColor = '#5227FF',
@@ -41,7 +41,7 @@ const DotGrid = ({
     resistance = 750,
     returnDuration = 1.5,
     className = '',
-    style
+    style = {}
 }) => {
     const wrapperRef = useRef(null);
     const canvasRef = useRef(null);
@@ -64,6 +64,7 @@ const DotGrid = ({
         if (typeof window === 'undefined' || !window.Path2D) return null;
 
         const p = new window.Path2D();
+        // Drawing at high resolution; dotSize is used for the radius
         p.arc(0, 0, dotSize / 2, 0, Math.PI * 2);
         return p;
     }, [dotSize]);
@@ -74,14 +75,17 @@ const DotGrid = ({
         if (!wrap || !canvas) return;
 
         const { width, height } = wrap.getBoundingClientRect();
-        const dpr = window.devicePixelRatio || 1;
+        const dpr = (window.devicePixelRatio || 1) * 2; // Supersampling for extreme sharpness
 
         canvas.width = width * dpr;
         canvas.height = height * dpr;
         canvas.style.width = `${width}px`;
         canvas.style.height = `${height}px`;
         const ctx = canvas.getContext('2d');
-        if (ctx) ctx.scale(dpr, dpr);
+        if (ctx) {
+            ctx.scale(dpr, dpr);
+            ctx.imageSmoothingEnabled = false; // Disable any smoothing
+        }
 
         const cols = Math.floor((width + gap) / (dotSize + gap));
         const rows = Math.floor((height + gap) / (dotSize + gap));
@@ -130,6 +134,8 @@ const DotGrid = ({
                 const dsq = dx * dx + dy * dy;
 
                 let style = baseColor;
+                let opacity = 0.9; // Peak base opacity for maximum visibility
+
                 if (dsq <= proxSq) {
                     const dist = Math.sqrt(dsq);
                     const t = 1 - dist / proximity;
@@ -137,12 +143,16 @@ const DotGrid = ({
                     const g = Math.round(baseRgb.g + (activeRgb.g - baseRgb.g) * t);
                     const b = Math.round(baseRgb.b + (activeRgb.b - baseRgb.b) * t);
                     style = `rgb(${r},${g},${b})`;
+                    opacity = 0.9 + (0.1 * t); // Gradually increase opacity from 0.9 to 1.0
                 }
 
                 ctx.save();
-                ctx.translate(ox, oy);
+                // Strictly floor coordinates for pixel-perfect placement
+                ctx.translate(Math.floor(ox), Math.floor(oy));
+                ctx.globalAlpha = opacity;
                 ctx.fillStyle = style;
-                ctx.fill(circlePath);
+                // Restored circular shape with high-resolution rendering
+                if (circlePath) ctx.fill(circlePath);
                 ctx.restore();
             }
 

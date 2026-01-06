@@ -46,7 +46,10 @@ const skillCategories = [
 export function Skills() {
   return (
     <section id="skills" className="py-24 relative">
-      <div className="container mx-auto px-4">
+      {/* Glassy overlay */}
+      <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="space-y-2 text-center md:text-left">
             <p className="text-primary font-mono text-sm">02. Skills & Technologies</p>

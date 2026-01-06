@@ -7,7 +7,7 @@ const projects = [
     title: "Hangman Game with Advanced GUI",
     description:
       "Fully interactive Hangman game featuring an advanced graphical user interface, dynamic word selection, real-time input handling, and robust game-state management with a modular and scalable codebase.",
-    tech: ["Python","Tkinter"],
+    tech: ["Python", "Tkinter"],
     github: "https://github.com/Kkeshav356/Hangman-Game-with-Advanced-GUI-application",
     demo: null,
   },
@@ -25,7 +25,10 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="py-24 relative">
-      <div className="container mx-auto px-4">
+      {/* Glassy overlay */}
+      <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="space-y-2 text-center md:text-left">
             <p className="text-primary font-mono text-sm">03. My Work</p>

@@ -3,7 +3,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export function About() {
   return (
     <section id="about" className="py-24 relative">
-      <div className="container mx-auto px-4">
+      {/* Glassy overlay */}
+      <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-2">
             <p className="text-primary font-mono text-sm">01. About Me</p>

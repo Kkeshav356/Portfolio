@@ -24,11 +24,11 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <DotGrid
           dotSize={10}
-          gap={15}
-          baseColor="#5227FF"
-          activeColor="#5227FF"
-          proximity={120}
-          shockRadius={250}
+          gap={20}
+          baseColor="#99f6e4"
+          activeColor="#ffffff"
+          proximity={200}
+          shockRadius={300}
           shockStrength={5}
           resistance={750}
           returnDuration={1.5}
